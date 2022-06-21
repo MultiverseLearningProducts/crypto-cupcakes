@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const { PORT = 4000 } = process.env;
+// TODO - require express-openid-connect and destructure auth from it
 
 const { User, Cupcake } = require('./db');
 
@@ -13,19 +14,12 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.get('/', async (req, res, next) => {
-  try {
-    res.send(`
-      <h1>Welcome to Crypto Cupcakes!</h1>
-      <p>View <a href="/cupcakes">All Cupcakes</a></p>
-      <p>Log In <a href="/login">here</a></p>
-      <p>Or Log Out <a href="/logout">here</a></p>
-    `);
-  } catch (error) {
-    console.error(error);
-    next(error)
-  }
-});
+/* *********** YOUR CODE HERE *********** */
+// follow the module instructions: destructure config environment variables from process.env
+// follow the docs:
+  // define the config object
+  // attach Auth0 OIDC auth router
+  // create a GET / route handler that sends back Logged in or Logged out
 
 app.get('/cupcakes', async (req, res, next) => {
   try {
