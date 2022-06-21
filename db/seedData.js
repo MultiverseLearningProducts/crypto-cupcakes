@@ -34,15 +34,21 @@ const cupcakes = [
 const users = [
   {
     username: "brett",
-    password: "brettpass"
+    name: "Brett BePassed",
+    password: "brettpass",
+    email: "brett@example.com"
   },
   {
     username: "antonette",
-    password: "headfirst"
+    name: "Antonette Marie",
+    password: "headfirst",
+    email: "keepyourheadonstraight@example.com"
   },
   {
     username: "karianne",
-    password: "scarykary"
+    name: "Karianne Krum",
+    password: "scarykary",
+    email: "dontbefrightened@example.com"
   }
 ]
 
