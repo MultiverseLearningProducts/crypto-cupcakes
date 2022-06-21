@@ -1,9 +1,9 @@
 const {Sequelize, sequelize} = require('./db');
 
 const Cupcake = sequelize.define('cupcake', {
-  name: Sequelize.STRING,
-  color: Sequelize.STRING,
-  age: Sequelize.INTEGER
+  title: Sequelize.STRING,
+  flavor: Sequelize.STRING,
+  stars: Sequelize.INTEGER
 });
 
 module.exports = { Cupcake };
